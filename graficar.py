@@ -1,0 +1,14 @@
+x = [10, 15, 20, 25, 30, 35]
+y = [2.6, 3.1, 4.0, 4.3, 5.4, 6.1]
+n = len(x)
+sx = sum(x)
+sy = sum(y)
+sxy = sum(xi*yi for xi, yi in zip(x, y))
+sx2 = sum(xi**2 for xi in x)
+sx_2 = sx ** 2
+mx = sx / n
+my = sy / n
+num = n * sxy - sx * sy
+den = n * sx2 - sx_2
+pendiente = num / den
+intercepto = my - pendiente * mx
